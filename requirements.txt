@@ -1,10 +1,7 @@
 absl-py==0.2.2
 alabaster==0.7.10
 alembic==0.9.10
-git+https://github.com/Anaconda-Server/anaconda-client
-anaconda-project==0.8.2
 appdirs==1.4.3
-arcgis==1.4.1
 asn1crypto==0.24.0
 astor==0.6.2
 astroid==1.6.3
@@ -16,7 +13,6 @@ backports.shutil-get-terminal-size==1.0.0
 beautifulsoup4==4.6.0
 bitarray==0.8.1
 bkcharts==0.2
-git+https://github.com/blaze/blaze
 bleach==1.5.0
 bokeh==0.12.16
 boto==2.48.0
@@ -34,11 +30,7 @@ cloudpickle==0.5.3
 clyent==1.2.1
 colorama==0.3.9
 comtypes==1.1.4
-conda==4.3.16
-git+https://github.com/conda/conda-build
-git+https://github.com/conda/conda-verify@2.0.0
 contextlib2==0.5.5
-cryptography==2.2.2
 cycler==0.10.0
 Cython==0.28.2
 cytoolz==0.9.0.1
@@ -65,7 +57,6 @@ glob2==0.6
 gmplot==1.2.0
 google-auth==1.5.0
 google-auth-oauthlib==0.2.0
-googleads==12.1.0
 greenlet==0.4.13
 grpcio==1.12.1
 gunicorn==19.8.1
@@ -75,10 +66,6 @@ html5lib==0.9999999
 idna==2.6
 imageio==2.3.0
 imagesize==1.0.0
-ipykernel==4.8.2
-ipython==6.4.0
-ipython-genutils==0.2.0
-ipywidgets==7.2.1
 isodate==0.6.0
 isort==4.3.4
 itsdangerous==0.24
@@ -87,16 +74,9 @@ jedi==0.12.0
 Jinja2==2.10
 jmespath==0.9.3
 jsonschema==2.6.0
-jupyter==1.0.0
-jupyter-client==5.2.3
-jupyter-console==5.2.0
-jupyter-core==4.4.0
-jupyterlab==0.32.1
-jupyterlab-launcher==0.10.5
 keyring==11.0.0
 kiwisolver==1.0.1
 lazy-object-proxy==1.3.1
-lightfm==1.15
 llvmlite==0.23.2
 locket==0.2.0
 lxml==4.2.1
@@ -105,7 +85,6 @@ Markdown==2.6.11
 MarkupSafe==1.0
 matplotlib==2.2.2
 mccabe==0.6.1
-git+https://github.com/ContinuumIO/menuinst
 mistune==0.8.3
 mkl-fft==1.0.2
 mkl-random==1.0.1
@@ -143,7 +122,6 @@ pkginfo==1.4.2
 pluggy==0.6.0
 ply==3.11
 prompt-toolkit==1.0.15
-prophet==0.1.1
 protobuf==3.6.0
 psutil==5.4.5
 psycopg2==2.7.5
@@ -153,7 +131,6 @@ pyasn1-modules==0.2.1
 pycodestyle==2.4.0
 pycosat==0.6.3
 pycparser==2.18
-pycrypto==2.6.1
 pycurl==7.43.0.1
 pyflakes==1.6.0
 Pygments==2.2.0
@@ -164,7 +141,6 @@ pyparsing==2.2.0
 pyreadline==2.1
 pyshp==1.2.12
 PySocks==1.6.8
-git+https://github.com/facebookresearch/pysparnn
 pytest==3.5.1
 pytest-arraydiff==0.2
 pytest-astropy==0.3.0
@@ -175,7 +151,6 @@ python-dateutil==2.7.3
 python-dotenv==0.8.2
 python-editor==1.0.3
 pytz==2018.4
-git+https://github.com/PyWavelets/pywt
 PyYAML==3.12
 pyzmq==17.0.0
 QtAwesome==0.4.4
@@ -185,7 +160,6 @@ requests==2.18.4
 requests-oauthlib==1.0.0
 requests-toolbelt==0.8.0
 reverse-geocoder==1.5.1
-rope==0.10.7
 rsa==3.4.2
 ruamel-yaml==0.15.35
 s3transfer==0.1.13
@@ -194,7 +168,6 @@ scikit-learn==0.19.1
 scikit-optimize==0.5.2
 scipy==1.1.0
 seaborn==0.8.1
-selenium==3.14.0
 Send2Trash==1.5.0
 simplegeneric==0.8.1
 singledispatch==3.4.0.3
@@ -205,24 +178,18 @@ sortedcollections==0.6.1
 sortedcontainers==1.5.10
 Sphinx==1.7.4
 sphinxcontrib-websupport==1.0.1
-spyder==3.2.8
-SQLAlchemy==1.2.8
-SQLAlchemy-Utils==0.33.3
 statsmodels==0.9.0
 stop-words==2015.2.23.1
 suds-jurko==0.6
 sympy==1.1.1
 tables==3.4.3
 tblib==1.3.2
-tensorboard==1.8.0
-tensorflow==1.8.0
 termcolor==1.1.0
 terminado==0.8.1
 testpath==0.3.1
 timezonefinder==3.0.1
 toolz==0.9.0
 tornado==5.0.2
-tqdm==4.23.4
 traitlets==4.3.2
 typing==3.6.4
 unicodecsv==0.14.1
