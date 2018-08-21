@@ -175,7 +175,7 @@ python-dateutil==2.7.3
 python-dotenv==0.8.2
 python-editor==1.0.3
 pytz==2018.4
-PyWavelets==0.5.2
+git+https://github.com/PyWavelets/pywt
 pywin32==223
 pywin32-ctypes==0.1.2
 pywinpty==0.5.1
