@@ -164,7 +164,7 @@ pyparsing==2.2.0
 pyreadline==2.1
 pyshp==1.2.12
 PySocks==1.6.8
-pysparnn==0.4
+git+https://github.com/facebookresearch/pysparnn
 pytest==3.5.1
 pytest-arraydiff==0.2
 pytest-astropy==0.3.0
