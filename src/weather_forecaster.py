@@ -22,7 +22,7 @@ import os, sys, inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0,parentdir)
-from config import weather_key 
+from config import owm_key 
 
 class weather_forecaster():
     
@@ -30,7 +30,7 @@ class weather_forecaster():
         self.forecast = None
         
     def get_forecast(self, lat=45.523, lng=-73.581, days=4):
-        owm = pyowm.OWM(weather_key)
+        owm = pyowm.OWM(owm_key)
         
         self.lat = lat
         self.lng = lng
