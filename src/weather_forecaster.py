@@ -24,10 +24,11 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0,parentdir)
 
 try:
-    #grab keys from the environment for Jenkins runs
-    owm_key = os.environ.get('OWM_KEY')
-except:
     from config import owm_key
+except:
+    #grab keys from the environment
+    owm_key = os.environ.get('OWM_KEY')
+    
    
 class weather_forecaster():
     
