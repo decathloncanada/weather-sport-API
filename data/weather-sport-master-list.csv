@@ -1,0 +1,103 @@
+Sport Id,Sport (en),Below 0,0 to 10,10 to 20,20 to 30,30 or above,Indoor
+294,Aikido,0,0,0,1,0,1
+219,Aquafit,0,0,0,1,1,1
+331,Aqualearning,0,0,0,1,1,1
+180,Archery,0,0,1,1,0,0
+132,Badminton,0,0,0,0,0,1
+74,Baseball,0,0,1,1,0,0
+78,Basketball,0,0,1,1,0,1
+311,Basque Rural Sports,0,0,1,1,0,0
+305,Beach Tennis,0,0,0,1,1,0
+315,Billiard Sports,0,0,0,0,0,1
+281,Bmx,0,0,1,1,0,0
+471,Body Surfing,0,0,0,1,1,0
+321,Bodyboard,0,0,0,1,1,0
+127,Boxing,0,0,0,0,0,1
+150,Camping,0,0,1,1,0,0
+318,Canoeing / Kayaking,0,0,1,1,1,0
+51,Canyoning,0,0,0,1,1,0
+298,Capoiera,0,0,0,1,0,1
+283,City Bike,0,0,1,1,0,0
+37,Climbing,0,0,1,1,0,1
+76,Cricket,0,0,1,1,0,0
+100,Dance,0,0,0,0,0,1
+184,Darts,0,0,0,0,0,1
+186,Diving,0,0,0,1,1,1
+286,Equestrian Centre,0,0,1,1,0,0
+304,Fencing,0,0,0,0,0,1
+98,Field Hockey,0,0,1,1,0,0
+162,Figure Skating,0,0,0,0,0,1
+109,Fitness / Cardio Training,0,0,0,0,0,1
+87,Football,0,0,1,1,0,0
+310,Frescobol,0,0,0,1,1,0
+306,Frontennis,0,0,1,1,0,1
+178,Golf,0,0,1,1,0,0
+104,Gymnastics,0,0,0,0,0,1
+428,Gymnastics / Pilates,0,0,0,0,0,1
+96,Handball,0,0,0,0,0,1
+147,Hiking,1,1,1,1,0,0
+29,Hunting,0,1,1,1,0,0
+284,Hybrid Biking,0,0,1,1,0,0
+175,Ice Hockey,1,0,0,0,0,1
+160,Ice Skating,1,0,0,0,0,1
+404,Inline And Street Hockey,0,0,1,1,0,1
+166,Inline Skating,0,0,1,1,0,1
+293,Jiu Jitsu,0,0,0,0,0,1
+389,Jogging,0,1,1,1,0,0
+302,Judo,0,0,0,0,0,1
+301,Karate,0,0,0,0,0,1
+295,Kendo,0,0,0,0,0,1
+324,Kiteboarding,0,0,1,1,1,0
+297,Kung Fu,0,0,0,0,0,1
+289,Lacrosse,0,0,1,1,0,1
+473,Land Kite / Power Kite,0,0,1,1,0,0
+285,Mountain Biking,0,0,1,1,0,0
+45,Mountaineering,1,1,1,1,0,0
+290,Netball,0,0,0,0,0,1
+488,Nordic Walking,1,0,0,0,0,0
+490,Orienteering,0,0,1,1,0,0
+143,Padel,0,0,1,1,0,0
+309,Peteca,0,0,1,1,1,1
+466,Pickleball,0,0,1,1,0,1
+395,Power Walking,0,1,1,1,0,0
+182,Pétanque / Skittles / Shuffleboard,0,0,0,1,1,0
+487,Race Walking,0,0,1,1,0,0
+312,Racquetball,0,0,1,1,0,1
+282,Road Biking,0,0,1,1,0,0
+461,Road Running,0,0,1,1,0,0
+89,Rugby,0,0,1,1,0,1
+299,Sambo,0,0,0,0,0,1
+163,Scooter,0,0,1,1,0,0
+171,Skateboarding,0,0,1,1,0,1
+66,Skiing,1,0,0,0,0,0
+320,Skimboard,0,0,0,1,1,0
+409,Slacklining,0,0,0,1,1,0
+253,Sledding,1,0,0,0,0,0
+70,Snowboarding,1,0,0,0,0,0
+81,Soccer,0,0,1,1,0,1
+308,Speed Badminton,0,0,1,1,0,1
+307,Speedball,0,0,0,0,0,1
+49,Spelunking,0,0,0,1,1,0
+392,Sport Shooting,0,0,1,1,0,0
+141,Squash,0,0,1,1,0,1
+319,Stand Up Paddleboarding,0,0,0,1,1,0
+322,Surfing,0,0,0,1,1,1
+224,Swimming,0,0,0,1,1,1
+139,Table Tennis,0,0,0,0,0,1
+300,Taekwondo,0,0,0,0,0,1
+296,Tai Chi,0,0,1,1,0,1
+134,Tennis,0,0,1,1,0,1
+330,Tow Sports,0,0,0,1,1,0
+12,Track And Field,0,0,1,1,0,1
+280,Trail,0,0,1,1,0,0
+287,Trail Riding,0,0,1,1,0,0
+449,Triathlon,0,0,1,1,0,0
+93,Volleyball,0,0,0,0,0,1
+329,Wakeboarding,0,0,0,1,1,0
+405,Water Polo,0,0,0,0,0,1
+328,Water Skiing,0,0,0,1,1,0
+351,Weight Training,0,0,0,0,0,1
+288,Western Riding,0,0,1,1,0,0
+323,Windsurfing,0,0,0,1,1,0
+303,Wrestling,0,0,0,0,0,1
+292,Yoga,0,0,1,1,0,1
