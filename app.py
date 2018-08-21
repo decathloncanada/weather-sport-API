@@ -18,6 +18,7 @@ CORS(app)
 #of the server
 def precompute_recommendations():
     global rec
+    print('calculated rec')
     rec = sport_recommender.sport_recommender()
     rec._build_recommendation_dict()
     
@@ -36,7 +37,7 @@ def get_recommendations():
     elif days < 1:
         days = 1
         print('Number of days has to be between 1 and 4. Set to 0')
-        
+    print('fetching calls')
     #call the recommendation system
     rec.get_recommendations(lat=origin[1], lng=origin[0], days=days,
                             build_recommendation_dict=False)
@@ -49,5 +50,6 @@ def get_recommendations():
 if __name__ == '__main__':
     #precompute all recommendations
     precompute_recommendations()
+    print('reco computated')
     #run the app
     app.run()
