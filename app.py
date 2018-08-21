@@ -14,6 +14,14 @@ from src import sport_recommender
 app = Flask(__name__)
 CORS(app)
 
+#function to precompute the recommendations for each possible forecast at the launch
+#of the server
+def precompute_recommendations():
+    global rec
+    rec = sport_recommender.sport_recommender()
+    rec._build_recommendation_dict()
+    
+
 @app.route('/weather-sport-API')
 def get_recommendations():
     #get the lng and lat coordinates for the recommendation
@@ -30,13 +38,16 @@ def get_recommendations():
         print('Number of days has to be between 1 and 4. Set to 0')
         
     #call the recommendation system
-    #get the number of days over witch we want the forecast
-    rec = sport_recommender.sport_recommender()
-    rec.get_recommendations(lat=origin[1], lng=origin[0], days=days)
+    rec.get_recommendations(lat=origin[1], lng=origin[0], days=days,
+                            build_recommendation_dict=False)
     
     #return recommendations as a json   
     return jsonify({'Sports recommended': rec.recommendation,
-                    'Reason': rec.reason})
+                    'Forecast': rec.forecast})
+
     
 if __name__ == '__main__':
+    #precompute all recommendations
+    precompute_recommendations()
+    #run the app
     app.run()

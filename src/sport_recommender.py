@@ -22,55 +22,85 @@ class sport_recommender():
     
     def __init__(self):
         self.recommendation = None
-        self.reason = None
-        
-    def get_recommendations(self, lat=45.523, lng=-73.581, days=4):
+        self.forecast = None
+    
+    #Function to precompute list of sports for every possible weather forecast    
+    def _build_recommendation_dict(self):
         
         #Extract the sport-weather masterlist
         self.sports_df = pd.read_csv(parentdir + '/data/weather-sport-master-list.csv', encoding='latin1')
-
+        
+        #Compute the list of recommended sports fore every possible forecast
+        self.recommendation_dict = {}
+        
+        #If rainy, recommend indoor sports
+        self.recommendation_dict['Indoor'] = list(self.sports_df[self.sports_df['Indoor']==1]['Sport Id'])
+        self.recommendation_dict['Indoor'].sort()
+        
+        #really warm weather
+        self.recommendation_dict['30 or above'] = list(self.sports_df[self.sports_df['30 or above']==1]['Sport Id'])
+        self.recommendation_dict['30 or above'].sort()
+    
+        #warm weather
+        self.recommendation_dict['20 to 30'] = list(self.sports_df[self.sports_df['20 to 30']==1]['Sport Id'])
+        self.recommendation_dict['20 to 30'].sort()
+        
+        #comfortable weather
+        self.recommendation_dict['10 to 20'] = list(self.sports_df[self.sports_df['10 to 20']==1]['Sport Id'])
+        self.recommendation_dict['10 to 20'].sort()
+        
+        #chilly weather
+        self.recommendation_dict['0 to 10'] = list(self.sports_df[self.sports_df['0 to 10']==1]['Sport Id'])
+        self.recommendation_dict['0 to 10'].sort()
+        
+        #cold weather
+        self.recommendation_dict['Below 0'] = list(self.sports_df[self.sports_df['Below 0']==1]['Sport Id'])
+        self.recommendation_dict['Below 0'].sort() 
+        
+        
+    def get_recommendations(self, lat=45.523, lng=-73.581, days=4, build_recommendation_dict=True):
+        
+        if build_recommendation_dict:
+            self._build_recommendation_dict()
+        
         #Get the weather forecast
         wfc = weather_forecaster()
         wfc.get_forecast(lat=lat, lng=lng, days=4)
-        self.forecast = wfc.forecast
+        self.weather = wfc.forecast
         
         #Filter the list of sports given the predicted weather
         #If rainy, recommend indoor sports
-        if self.forecast[1] == 1:
-            self.recommendation = list(self.sports_df[self.sports_df['Indoor']==1]['Sport Id']).sort()
-            self.reason = "Mostly rainy forecast"
+        if self.weather[1] == 1:
+            self.recommendation = self.recommendation_dict['Indoor']
+            self.forecast = "Mostly rainy forecast"
             
         else:
-            #really warm forecast
-            if self.forecast[0] >= 30:
-                self.recommendation = list(self.sports_df[self.sports_df['30 or above']==1]['Sport Id'])
-                self.recommendation.sort()
-                self.reason = "Really warm temperature (above 30 Celsius), mostly not rainy"
+            #really warm weather
+            if self.weather[0] >= 30:
+                self.recommendation = self.recommendation_dict['30 or above']
+                self.forecast = "Really warm temperature (above 30 Celsius), generally not rainy"
             
-            #warm forecast
-            elif self.forecast[0] >= 20:
-                self.recommendation = list(self.sports_df[self.sports_df['10 to 20']==1]['Sport Id'])
-                self.recommendation.sort()
-                self.reason = "Warm temperature (between 20 and 30 Celsius), mostly not rainy"
+            #warm weather
+            elif self.weather[0] >= 20:
+                self.recommendation = self.recommendation_dict['20 to 30']
+                self.forecast = "Warm temperature (between 20 and 30 Celsius), generally not rainy"
                 
-            #comfortable forecast
-            elif self.forecast[0] >= 10:
-                self.recommendation = list(self.sports_df[self.sports_df['10 to 20']==1]['Sport Id'])
-                self.recommendation.sort()
-                self.reason = "Comfortable temperature (between 10 and 20 Celsius), mostly not rainy"
+            #comfortable weather
+            elif self.weather[0] >= 10:
+                self.recommendation = self.recommendation_dict['10 to 20']
+                self.forecast = "Comfortable temperature (between 10 and 20 Celsius), generally not rainy"
                 
-            #chilly forecast
-            elif self.forecast[0] >= 0:
-                self.recommendation = list(self.sports_df[self.sports_df['0 to 10']==1]['Sport Id'])
-                self.recommendation.sort()
-                self.reason = "Chilly temperature (between 0 and 10 Celsius), mostly not rainy"
+            #chilly weather
+            elif self.weather[0] >= 0:
+                self.recommendation = self.recommendation_dict['0 to 10']
+                self.forecast = "Chilly temperature (between 0 and 10 Celsius), generally not rainy"
                 
-            #cold forecast
+            #cold weather
             else:
-                self.recommendation = list(self.sports_df[self.sports_df['Below 0']==1]['Sport Id'])
-                self.recommendation.sort()
-                self.reason = "Cold temperature (below 0 Celsius), mostly not rainy"
-        
+                self.recommendation = self.recommendation_dict['Below 0']
+                self.forecast = "Cold temperature (below 0 Celsius), generally not rainy"
+    
+    
 if __name__ == '__main__':
     rec = sport_recommender()
     rec.get_recommendations()
