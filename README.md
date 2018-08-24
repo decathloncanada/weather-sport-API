@@ -54,7 +54,7 @@ http://localhost:5000/weather-sport-API?origin=-73.582,45.511&days=2
 
 The returned json should look like:
 ```
-{"Forecast":"Warm temperature (between 20 and 30 Celsius), generally not rainy","Sports recommended":[12,29,37,45,49,51,74,76,78,81,87,89,98,134,141,143,147,150,163,166,171,178,180,182,186,219,224,280,281,282,283,284,285,286,287,288,289,292,294,296,298,305,306,308,309,310,311,312,318,319,320,321,322,323,324,328,329,330,331,389,392,395,404,409,449,461,466,471,473,487,490]}
+{"forecast":"Warm temperature (between 20 and 30 Celsius), generally not rainy","sports_recommended":[12,29,37,45,49,51,74,76,78,81,87,89,98,134,141,143,147,150,163,166,171,178,180,182,186,219,224,280,281,282,283,284,285,286,287,288,289,292,294,296,298,305,306,308,309,310,311,312,318,319,320,321,322,323,324,328,329,330,331,389,392,395,404,409,449,461,466,471,473,487,490]}
 ```
 The information about the sports given their IDs can be obtained from the [Sports API](https://developers.decathlon.com/sportplaces/#sports).
 
