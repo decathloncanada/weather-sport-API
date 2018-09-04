@@ -56,8 +56,8 @@ if __name__ == '__main__':
                                 build_recommendation_dict=False)
         
         #return recommendations as a json   
-        return jsonify({'Sports recommended': rec.recommendation,
-                        'Forecast': rec.forecast})
+        return jsonify({'sports_recommended': rec.recommendation,
+                        'forecast': rec.forecast})
     
     #run the app
     app.run()
