@@ -1,5 +1,5 @@
 # weather-sport-API
-The API provides the list of sports which can be practiced given the curren weather or the weather forecast. The inputs of the API are the geolocation (lat and lng) of interest and the number of days (zero to four) over which we want to consider the weather. When days=0 is passed as an argument, the current weather conditions are used, while the weather forecast is used when days > 0. The output is the list of sports matching the weather conditions. 
+The API provides the list of sports which can be practiced given the current weather conditions or the weather forecast. The inputs of the API are the geolocation (lat and lng) of interest and the number of days (zero to four) over which we want to consider the weather. If days=0 is passed as an argument, the current weather conditions are used, while the weather forecast is used when days > 0. The output is the list of sports matching the weather conditions. 
 
 For any additional information, please contact samuel.mercier@decathlon.com
 
