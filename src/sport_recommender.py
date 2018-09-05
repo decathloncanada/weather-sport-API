@@ -65,45 +65,45 @@ class sport_recommender():
         
         #Get the weather forecast
         wfc = weather_forecaster()
-        wfc.get_forecast(lat=lat, lng=lng, days=4)
+        wfc.get_forecast(lat=lat, lng=lng, days=days)
         self.weather = wfc.forecast
         
         #Filter the list of sports given the predicted weather
         #If rainy, recommend indoor sports
         if self.weather[1] == 1:
             self.recommendation = self.recommendation_dict['Indoor']
-            self.forecast = "Mostly rainy forecast"
+            self.forecast = "Rainy"
             
         else:
             #really warm weather
             if self.weather[0] >= 30:
                 self.recommendation = self.recommendation_dict['30 or above']
-                self.forecast = "Really warm temperature (above 30 Celsius), generally not rainy"
+                self.forecast = "Really warm temperature (above 30 Celsius), not rainy"
             
             #warm weather
             elif self.weather[0] >= 20:
                 self.recommendation = self.recommendation_dict['20 to 30']
-                self.forecast = "Warm temperature (between 20 and 30 Celsius), generally not rainy"
+                self.forecast = "Warm temperature (between 20 and 30 Celsius), not rainy"
                 
             #comfortable weather
             elif self.weather[0] >= 10:
                 self.recommendation = self.recommendation_dict['10 to 20']
-                self.forecast = "Comfortable temperature (between 10 and 20 Celsius), generally not rainy"
+                self.forecast = "Comfortable temperature (between 10 and 20 Celsius), not rainy"
                 
             #chilly weather
             elif self.weather[0] >= 0:
                 self.recommendation = self.recommendation_dict['0 to 10']
-                self.forecast = "Chilly temperature (between 0 and 10 Celsius), generally not rainy"
+                self.forecast = "Chilly temperature (between 0 and 10 Celsius), not rainy"
                 
             #cold weather
             else:
                 self.recommendation = self.recommendation_dict['Below 0']
-                self.forecast = "Cold temperature (below 0 Celsius), generally not rainy"
+                self.forecast = "Cold temperature (below 0 Celsius), not rainy"
     
     
 if __name__ == '__main__':
     rec = sport_recommender()
-    rec.get_recommendations()
+    rec.get_recommendations(days=0)
     
         
         

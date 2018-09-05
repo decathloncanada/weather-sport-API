@@ -43,12 +43,7 @@ if __name__ == '__main__':
         days = int(request.args.get('days'))
         if days > 4:
             days = 4
-            print('Number of days has to be between 1 and 4. Set to 4')
-            
-        elif days < 1:
-            days = 1
-            print('Number of days has to be between 1 and 4. Set to 0')
-        print('fetching calls')
+            print('Number of days has to be below or equal 4. Set to 4')
         
         #call the recommendation system
         rec = app.config['rec']
@@ -56,8 +51,12 @@ if __name__ == '__main__':
                                 build_recommendation_dict=False)
         
         #return recommendations as a json   
-        return jsonify({'sports_recommended': rec.recommendation,
-                        'forecast': rec.forecast})
+        if days == 0:
+            return jsonify({'sports_recommended': rec.recommendation,
+                            'weather': rec.forecast})
+        else:
+            return jsonify({'sports_recommended': rec.recommendation,
+                            'forecast': rec.forecast})
     
     #run the app
     app.run()
