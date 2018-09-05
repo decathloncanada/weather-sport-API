@@ -4,8 +4,6 @@ Router for the endpoint of the weather-sport-recommendation API
 
 exemple of local url: 
     http://localhost:5000/weather-sport-API?origin=-73.582,45.511&days=4
-    
-Git: dev branch
 
 @author: AI team
 """
